@@ -90,7 +90,7 @@ _copyright_header: str = f"sqlite3mysql version {package_version} Copyright (c) 
 @click.option(
     "--mysql-text-type",
     type=click.Choice(MYSQL_TEXT_COLUMN_TYPES, case_sensitive=False),
-    default="TEXT",
+    default="VARCHAR(255)",
     help="MySQL default text field type. Defaults to TEXT.",
 )
 @click.option(

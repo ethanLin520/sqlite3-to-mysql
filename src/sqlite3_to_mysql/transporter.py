@@ -99,9 +99,9 @@ class SQLite3toMySQL(SQLite3toMySQLAttributes):
 
         self._mysql_string_type = str(kwargs.get("mysql_string_type", "VARCHAR(255)")).upper()
 
-        self._mysql_text_type = str(kwargs.get("mysql_text_type", "TEXT")).upper()
+        self._mysql_text_type = str(kwargs.get("mysql_text_type", "VARCHAR(255)")).upper()
         if self._mysql_text_type not in MYSQL_TEXT_COLUMN_TYPES:
-            self._mysql_text_type = "TEXT"
+            self._mysql_text_type = "VARCHAR(255)"
 
         self._mysql_charset = kwargs.get("mysql_charset", "utf8mb4") or "utf8mb4"
 

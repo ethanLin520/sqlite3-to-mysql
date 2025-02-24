@@ -51,6 +51,7 @@ MYSQL_TEXT_COLUMN_TYPES: t.Tuple[str, ...] = (
     "MEDIUMTEXT",
     "TEXT",
     "TINYTEXT",
+    "VARCHAR(255)",
 )
 
 MYSQL_TEXT_COLUMN_TYPES_WITH_JSON: t.Tuple[str, ...] = ("JSON",) + MYSQL_TEXT_COLUMN_TYPES
